@@ -1,0 +1,18 @@
+{
+    "bin": {
+        "create-veapp": "./index.js"
+    },
+    "name": "create-veapp",
+    "version": "1.0.0",
+    "description": "Bootstrap a vechain app with smartcontract",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": "https://github.com/hexdee/create-veapp",
+    "author": "Hexdee",
+    "license": "MIT",
+    "dependencies": {
+        "inquirer": "^7.0.0"
+    }
+}

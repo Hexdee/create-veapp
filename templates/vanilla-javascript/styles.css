@@ -1,0 +1,87 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #282c34;
+}
+
+header {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    border-bottom: 1px solid #3b4457;
+}
+
+button {
+    padding: 16px 32px;
+    border-radius: 16px;
+    background-color: #61dafb;
+    border: 0;
+}
+
+button:hover {
+    background-color: white;
+}
+
+main {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.counter {
+    background-color: white;
+    min-width: 200px;
+    min-height: 200px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+#count {
+    font-size: 128px;
+    margin: 0;
+    padding: 0;
+}
+
+.counter-buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+}
+
+footer {
+    border-top: 1px solid #3b4457;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+main .signer {
+    color: white;
+}
+
+#disconnect {
+    display: none;
+}
+
+/* 
+.counter-buttons .App-button:hover {
+  background-color: #282c34;
+  color: white;
+} */

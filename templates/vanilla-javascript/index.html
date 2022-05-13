@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <header>
+        <h1 class='title'>VeCounter</h1>
+            <button class='App-button' id="disconnect" onClick={logout}>Disconnect</button>
+            <button class='App-button' id="connect" onClick={login}>Connect Sync</button>
+    </header>
+    <main>
+        <div class='counter'>
+            <p id='count'></p>
+        </div>
+        <div class='counter-buttons'>
+            <button class='App-button' onClick="increase()">Increase</button>
+            <button class='App-button' onClick="decrease()">Decrease</button>
+        </div>
+        <button class='App-button' onClick="reset()">Reset</button>
+    </main>
+    <script src="https://unpkg.com/@vechain/connex@2"></script>
+    <script src="index.js"></script>
+</body>
+</html>
