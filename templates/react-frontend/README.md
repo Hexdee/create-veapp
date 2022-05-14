@@ -17,7 +17,7 @@ Go ahead and play with the app and the code!
 ## Exploring The Code
 
 1. The backend code lives in the `/contract` folder, See `README.md` there for more info.
-2. The frontend code lives in the `/src` folder. `/src/index.html` or `/src/App.js` is a great place to start exploring.
+2. The frontend code lives in the `/src` folder. `/src/App.js` is a great place to start exploring.
 3. `/src/config` is where the connection to Vechain and integration with smart contract is done
 
 ### Write your own smart contract

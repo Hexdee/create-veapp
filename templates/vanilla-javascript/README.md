@@ -1,23 +1,74 @@
-# Getting Started with Create React App
+# VeApp-React-Project
 
 This project was created using [Create VeApp](https://github.com/hexdee/create-veapp).
 
-## Available Scripts
+## Quick Start
 
-In the project directory, do the following:
+To run this project locally:
 
-### Compile contract
+1. Prerequisites: Make sure you have a current Nodejs version installed
+2. Open `index.html` in your browser
 
-```shell
-npm run compile
-```
+Now you'll have a local development environment backed by the Vechain TestNet!
+
+Go ahead and play with the app and the code!
+
+## Exploring The Code
+
+1. The backend code lives in the `/contract` folder, See `README.md` there for more info.
+2. The frontend code lives in the `/index.html` and is a great place to start exploring.
+3. `/index.js` is where the connection to Vechain and integration with smart contract is done
+
+### Write your own smart contract
+
+Write your smart contract in the `/contract/contracts` folder
+Compile using `npx hardhat compile`
 
 ### Deploy contract
 
-```shell
-npm run deploy
+Create the script to deploy your smart contract in the /contract/scripts folder
+Run the script using `node scripts/{your_script.js}`
+
+### Set up integration in two-simple steps
+
+1. Modify line 1 in `/index.js` that sets the contract address. Set it to the address your smart contract is deployed to above.
+
+```javascript
+const contractAddress = "0xF2ad5A9d8E20782E581875b7941911C20A45e73E";
 ```
 
-### View in the browser
+2. You need your contract json file from `/contract/artifact` to access your smart contract funtions
+3. Example code
 
-Open `index.html` in your browser to view it
+```javascript
+function increase() {
+  const increaseABI = {
+    inputs: [],
+    name: "increase",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  };
+
+  const increaseMethod = connex.thor
+    .account(contractAddress)
+    .method(increaseABI);
+
+  const clause = increaseMethod.asClause();
+
+  connex.vendor
+    .sign("tx", [clause])
+    .comment("transaction signing - increase count")
+    .request()
+    .then((r) => console.log(JSON.stringify(r, null, 4)))
+    .catch((e) => console.log("error:" + e.message));
+}
+```
+
+### Start the development server
+
+```shell
+npm start
+```
+
+Open `index.html` in your browser
