@@ -2,15 +2,16 @@
 
 const inquirer = require("inquirer");
 const fs = require("fs");
+const { exec } = require("child_process");
 
 const CHOICES = fs.readdirSync(`${__dirname}/templates`);
 const CURR_DIR = process.cwd();
 
 const QUESTIONS = [
     {
-        name: "project-choice",
+        name: "Frontend-choice",
         type: "list",
-        message: "What project template would you like to generate?",
+        message: "Which framework would you like to use?",
         choices: CHOICES
     },
     {
@@ -27,13 +28,40 @@ const QUESTIONS = [
 
 inquirer.prompt(QUESTIONS).then(answers => {
     console.log(answers);
-    const projectChoice = answers["project-choice"];
+    const frontendChoice = answers["Frontend-choice"];
     const projectName = answers["project-name"];
-    const templatePath = `${__dirname}/templates/${projectChoice}`;
+    const templatePath = `${__dirname}/templates/${frontendChoice}`;
 
     fs.mkdirSync(`${CURR_DIR}/${projectName}`);
 
     createDirectoryContents(templatePath, projectName);
+    console.log("Installing dependencies...");
+    console.log("This might take a few minutes");
+    console.log("Installing Frontend dependencies...");
+    exec(`cd ${projectName} && npm install`, (err, stdout, stderr) => {
+      if (err) {
+        console.log(`error: ${err.message}`);
+        return;
+      }
+      if (stderr) {
+        //console.log(`stderr: ${stderr}`);
+	return;
+      }
+      //console.log(`stdout: ${stdout}`);
+      console.log("Installing hardhat dependecies...")
+    })
+      exec(`cd ${projectName} && cd contract && npm install`, (err, stdout, stderr) => {
+        if (err) {
+          console.log(`error: ${err.message}`);
+          return;
+        }
+        if (stderr) {
+          //console.log(`stderr: ${stderr}`);
+          return;
+        }
+        //console.log(`stdout: ${stdout}`);
+        console.log(`New project successfully created at ${projectName}!`);
+      });
 });
 
 function createDirectoryContents(templatePath, newProjectPath) {

@@ -16,7 +16,7 @@ Counter.abi.forEach(method => {
     return
   }
 
-  if (method.stateMutability == "view") {
+  if (method.stateMutability === "view") {
     Contract[method.name] = defineConstant(method)
   } else {
     Contract[method.name] = defineSignedRequest(method)

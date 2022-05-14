@@ -12,7 +12,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "deploy": "cd contract && npx hardhat deploy",
+    "compile": "cd contract && npx hardhat compile",
+    "deploy": "cd contract && node scripts/deploy.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

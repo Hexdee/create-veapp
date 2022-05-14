@@ -25,5 +25,5 @@ npx hardhat compile
 The sample script deploys and test the functionality of the smart contract
 
 ```shell
-node scripts/sample_script.js
+node scripts/deploy.js
 ```

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import "../App.css"
-import {ticker, contractAddress, connex, Contract} from '../config/connex'
+import {ticker, Contract} from '../config/connex'
 
 export const Counter = () => {
   const [count, setCount] = useState()

@@ -1,7 +1,7 @@
 import './App.css';
 import {useState} from 'react'
 import { Counter } from './components/Counter';
-import {contractAddress, connex, Contract} from './config/connex'
+import {connex, Contract} from './config/connex'
 
 /**
  *  The Contract Object allows us to access all functions in our smart contract by just calling 
@@ -43,7 +43,7 @@ function App() {
     setSigner("")
   }
   function isSignedIn() {
-    return signer != ""
+    return signer !== ""
   }
   return (
     <div className="App">

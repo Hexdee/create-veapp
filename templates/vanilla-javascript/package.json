@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "cd contract && node scripts/sample-script.js"
+    "compile": "cd contract && npx hardhat compile",
+    "deploy": "cd contract && node scripts/deploy.js"
   },
   "keywords": [],
   "author": "Hexdee",
