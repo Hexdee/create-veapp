@@ -32,7 +32,7 @@
     },
     {
       "inputs": [],
-      "name": "resset",
+      "name": "reset",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"

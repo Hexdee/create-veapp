@@ -1,5 +1,5 @@
 import Connex from '@vechain/connex'
-import Counter from './Counter.json'
+import contract from './contract.json'
 
 export const connex = new Connex({
     node: 'https://testnet.veblocks.net/',
@@ -11,7 +11,7 @@ export const contractAddress = process.env.CONTRACTADDRESS || "0xF2ad5A9d8E20782
 // Creating the Contract object from abi for easy method calls
 export let Contract = {}
 
-Counter.abi.forEach(method => {
+contract.abi.forEach(method => {
   if (!method.name || method.type !== 'function') {
     return
   }
