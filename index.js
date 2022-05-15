@@ -35,7 +35,7 @@ inquirer.prompt(QUESTIONS).then(answers => {
     fs.mkdirSync(`${CURR_DIR}/${projectName}`);
 
     createDirectoryContents(templatePath, projectName);
-    console.log("Installing dependencies...");
+    /*console.log("Installing dependencies...");
     console.log("This might take a few minutes");
     console.log("Installing Frontend dependencies...");
     exec(`cd ${projectName} && npm install`, (err, stdout, stderr) => {
@@ -61,7 +61,7 @@ inquirer.prompt(QUESTIONS).then(answers => {
         }
         //console.log(`stdout: ${stdout}`);
         console.log(`New project successfully created at ${projectName}!`);
-      });
+      });*/
 });
 
 function createDirectoryContents(templatePath, newProjectPath) {

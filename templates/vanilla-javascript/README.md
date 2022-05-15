@@ -6,8 +6,9 @@ This project was created using [Create VeApp](https://github.com/hexdee/create-v
 
 To run this project locally:
 
-1. Prerequisites: Make sure you have a current Nodejs version installed
-2. Open `index.html` in your browser
+1. Prerequisites: Make sure you have a current Nodejs version and [Sync](https://sync.vecha.in/) installed
+2. Install dependencies: `npm install`
+3. Open `index.html` in your browser
 
 Now you'll have a local development environment backed by the Vechain TestNet!
 
@@ -27,7 +28,7 @@ Compile using `npx hardhat compile`
 ### Deploy contract
 
 Create the script to deploy your smart contract in the /contract/scripts folder
-Run the script using `node scripts/{your_script.js}`
+Run the script using `node scripts/deploy.js`
 
 ### Set up integration in two-simple steps
 
