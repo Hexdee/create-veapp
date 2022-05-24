@@ -5,7 +5,7 @@ Bootstraps a Vechain Dapp with smart conract and integration
 1. Make sure you have a current [Nodejs](https://nodejs.org/en/) version installed
 2. Install [Sync 2](https://sync.vecha.in/) wallet
 
-## Gettin Started
+## Getting Started
 To create a new Vechain project, you need just one command:
 ```
 npx create-veapp
