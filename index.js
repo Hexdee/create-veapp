@@ -35,33 +35,10 @@ inquirer.prompt(QUESTIONS).then(answers => {
     fs.mkdirSync(`${CURR_DIR}/${projectName}`);
 
     createDirectoryContents(templatePath, projectName);
-    /*console.log("Installing dependencies...");
-    console.log("This might take a few minutes");
-    console.log("Installing Frontend dependencies...");
-    exec(`cd ${projectName} && npm install`, (err, stdout, stderr) => {
-      if (err) {
-        console.log(`error: ${err.message}`);
-        return;
-      }
-      if (stderr) {
-        //console.log(`stderr: ${stderr}`);
-	return;
-      }
-      //console.log(`stdout: ${stdout}`);
-      console.log("Installing hardhat dependecies...")
-    })
-      exec(`cd ${projectName} && cd contract && npm install`, (err, stdout, stderr) => {
-        if (err) {
-          console.log(`error: ${err.message}`);
-          return;
-        }
-        if (stderr) {
-          //console.log(`stderr: ${stderr}`);
-          return;
-        }
-        //console.log(`stdout: ${stdout}`);
-        console.log(`New project successfully created at ${projectName}!`);
-      });*/
+    console.clear();
+    console.log('\nCreated a new', '\x1b[36m', frontendChoice, '\x1b[0m', 
+        'Dapp in', '\x1b[32m', `${__dirname}/${projectName}`, '\x1b[0m', "\n");
+    console.log('\x1b[36m', `cd ${projectName}\n\n npm install\n npm start\n`, '\x1b[0m');
 });
 
 function createDirectoryContents(templatePath, newProjectPath) {

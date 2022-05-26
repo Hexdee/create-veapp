@@ -1,4 +1,4 @@
-# VeApp-React-Project
+# VeApp-Vanilla-Project
 
 This project was created using [Create VeApp](https://github.com/hexdee/create-veapp).
 

@@ -3,7 +3,7 @@
         "create-veapp": "./index.js"
     },
     "name": "create-veapp",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Bootstrap a vechain app with smartcontract",
     "main": "index.js",
     "scripts": {
@@ -13,6 +13,7 @@
     "author": "Hexdee",
     "license": "MIT",
     "dependencies": {
+        "chalk": "^5.0.1",
         "inquirer": "^7.0.0"
     }
 }
