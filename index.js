@@ -37,7 +37,7 @@ inquirer.prompt(QUESTIONS).then(answers => {
     createDirectoryContents(templatePath, projectName);
     console.clear();
     console.log('\nCreated a new', '\x1b[36m', frontendChoice, '\x1b[0m', 
-        'Dapp in', '\x1b[32m', `${__dirname}/${projectName}`, '\x1b[0m', "\n");
+        'Dapp in', '\x1b[32m', `${CURR_DIR}/${projectName}`, '\x1b[0m', "\n");
     console.log('\x1b[36m', `cd ${projectName}\n\n npm install\n npm start\n`, '\x1b[0m');
 });
 
@@ -54,7 +54,7 @@ function createDirectoryContents(templatePath, newProjectPath) {
 			const contents = fs.readFileSync(origFilePath, "utf8");
 			// rename fallback for npm ignore.
 
-			if (file === '.npmignore') file = '.gitignore'; 
+			if (file === '.git_ignore') file = '.gitignore'; 
 
             const writePath = `${CURR_DIR}/${newProjectPath}/${file}`;
             fs.writeFileSync(writePath, contents, "utf8");

@@ -1,4 +1,4 @@
-# Create VeApp
+# Create Ve App
 Bootstraps a Vechain Dapp with smart conract and integration
 
 ## Prerequisites
@@ -18,7 +18,7 @@ npx create-veapp
 
 - Change directory to your project directory
 ```
-cd {your_piroject_name}
+cd {your_project_name}
 ```
 - Install dependencies
 ```
