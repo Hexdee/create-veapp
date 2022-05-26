@@ -6,9 +6,8 @@ This project was created using [Create VeApp](https://github.com/hexdee/create-v
 
 To run this project locally:
 
-1. Prerequisites: Make sure you have a current Nodejs version installed
-2. Install dependencies: `npm install`
-3. Run the development server: `npm start`
+1. Install dependencies: `npm install`
+2. Run the development server: `npm start`
 
 Now you'll have a local development environment backed by the Vechain TestNet!
 
