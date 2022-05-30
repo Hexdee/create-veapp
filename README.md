@@ -1,13 +1,18 @@
 # Create Ve App
+
 Bootstraps a Vechain Dapp with smart conract and integration
 
 ## Prerequisites
+
 1. Make sure you have a current [Nodejs](https://nodejs.org/en/) version installed
 2. Install [Sync 2](https://sync.vecha.in/) wallet
 3. Get some test token from the [faucet](https://faucet.vecha.in/)
 
 ## Getting Started
+
+![Create VeApp Demo](cva.gif)
 To create a new Vechain project, you need just one command:
+
 ```
 npx create-veapp
 ```
@@ -17,14 +22,19 @@ npx create-veapp
 - Enter project name
 
 - Change directory to your project directory
+
 ```
 cd {your_project_name}
 ```
+
 - Install dependencies
+
 ```
 npm install
 ```
+
 - Start development server
+
 ```
 npm start
 ```
@@ -32,4 +42,5 @@ npm start
 🚀
 
 ## Develop your own Dapp
+
 To create your own Dapp, please follow the `README.md` in the project you just created!
